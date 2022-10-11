@@ -26,27 +26,27 @@
             </div>
             <div class="p-4">
               <h1><a href="index.html" class="logo">Javascript <span>Lista de exercícios</span></a></h1>
-              <ul class="list-unstyled components mb-5">
-                <li class="active">
-                    <a href="#"><span class="fa fa-hashtag mr-3"></span> Exercício 1</a>
+              <ul class="list-unstyled components mb-5" id="pills-tab" role="tablist">
+                <li class="active" role="presentation" onclick="getExercicio('exercicio1')">
+                    <a type="button" id="exercicio1-tab" data-bs-toggle="pill" data-bs-target="#exercicio1"  role="tab" aria-controls="exercicio1" aria-selected="true"><span class="fa fa-hashtag mr-3"></span> Exercício 1</a>
                 </li>
-                <li>
-                    <a href="#"><span class="fa fa-hashtag mr-3"></span> Exercício 2</a>
+                <li role="presentation" onclick="getExercicio('exercicio2')">
+                    <a type="button" id="exercicio2-tab" data-bs-toggle="pill" data-bs-target="#exercicio2"  role="tab" aria-controls="exercicio2" aria-selected="false"><span class="fa fa-hashtag mr-3"></span> Exercício 2</a>
                 </li>
-                <li>
-                   <a href="#"><span class="fa fa-hashtag mr-3"></span> Exercício 3</a>
+                <li role="presentation" onclick="getExercicio('exercicio3')">
+                   <a type="button"  id="exercicio3-tab" data-bs-toggle="pill" data-bs-target="#exercicio3"  role="tab" aria-controls="exercicio3" aria-selected="false"><span class="fa fa-hashtag mr-3"></span> Exercício 3</a>
                 </li>
-                <li>
-                    <a href="#"><span class="fa fa-hashtag mr-3"></span> Exercício 4</a>
+                <li role="presentation" onclick="getExercicio('exercicio4')">
+                    <a type="button" id="exercicio4-tab" data-bs-toggle="pill" data-bs-target="#exercicio4"  role="tab" aria-controls="exercicio4" aria-selected="false"><span class="fa fa-hashtag mr-3"></span> Exercício 4</a>
                 </li>
-                <li>
-                    <a href="#"><span class="fa fa-hashtag mr-3"></span> Exercício 5</a>
+                <li role="presentation" onclick="getExercicio('exercicio5')">
+                    <a type="button" id="exercicio5-tab" data-bs-toggle="pill" data-bs-target="#exercicio5"  role="tab" aria-controls="exercicio5" aria-selected="false"><span class="fa fa-hashtag mr-3"></span> Exercício 5</a>
                 </li>
-                <li>
-                    <a href="#"><span class="fa fa-hashtag mr-3"></span> Exercício 6</a>
+                <li role="presentation" onclick="getExercicio('exercicio6')">
+                    <a type="button" id="exercicio6-tab" data-bs-toggle="pill" data-bs-target="#exercicio6"  role="tab" aria-controls="exercicio6" aria-selected="false"><span class="fa fa-hashtag mr-3"></span> Exercício 6</a>
                 </li>
-                <li>
-                    <a href="#"><span class="fa fa-hashtag mr-3"></span> Exercício 7</a>
+                <li role="presentation" onclick="getExercicio('exercicio7')">
+                    <a type="button" id="exercicio7-tab" data-bs-toggle="pill" data-bs-target="#exercicio7"  role="tab" aria-controls="exercicio7" aria-selected="false"><span class="fa fa-hashtag mr-3"></span> Exercício 7</a>
                 </li>
               </ul>
 
@@ -60,15 +60,170 @@
         </div>
       </nav>
 
-    <!-- Page Content  -->
-    <div id="content" class="p-4 p-md-5 pt-5" id="exercicio1">
-      <h2 class="mb-4">Sidebar #01</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
+      <!-- Exercício Content  -->
+      <div  class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade content p-4 p-md-5 pt-5" id="exercicio1" role="tabpanel" aria-labelledby="exercicio1-tab" tabindex="0">
+          <h2 class="mb-4">Exercício #01</h2>
+          <p>Crie duas variáveis com o valor 10 e 100. Mostre o valor da soma, subtração, divisão e multiplicação em um ALERT.</p>
+        </div>
+  
+        <div class="tab-pane fade content p-4 p-md-5 pt-5" id="exercicio2" role="tabpanel" aria-labelledby="exercicio2-tab" tabindex="0">
+          <h2 class="mb-4">Exercício #02</h2>
+          <p>Crie um loop que mostre na tela o valor de 10 a 100.</p>
+
+          <div id="exe2"></div>
+        </div>
+  
+        <div class="tab-pane fade content p-4 p-md-5 pt-5" id="exercicio3" role="tabpanel" aria-labelledby="exercicio3-tab" tabindex="0">
+          <h2 class="mb-4">Exercício #03</h2>
+          <p>Crie uma variável que recebe o valor fixo 5. Mostre a tabuada desse número.</p>
+
+          <div id="exe3"></div>
+        </div>
+  
+        <div class="tab-pane fade content p-4 p-md-5 pt-5" id="exercicio4" role="tabpanel" aria-labelledby="exercicio4-tab" tabindex="0">
+          <h2 class="mb-4">Exercício #04</h2>
+          <p>Adapte o exercício anterior para o valor não ser mais fixo. O valor deve ser recebido de um campo da tela.</p>
+
+          <input class="form-control" type="number" name="numero" id="valorTabuada" onblur="tabuada()">
+
+          <div class="row" id="exe4"></div>
+        </div>
+  
+        <div class="tab-pane fade content p-4 p-md-5 pt-5" id="exercicio5" role="tabpanel" aria-labelledby="exercicio5-tab" tabindex="0">
+          <h2 class="mb-4">Exercício #05</h2>
+          <p>Fazer um calculadora que receberá dois valores e a operação (+,-,*,/). Ao clicar no botão calcular o resultado é demonstrado.</p>
+
+          <div class="container calc">
+            <div class="row">
+                <div class="col-lg-12 nopadding">
+                  <input type="text" name="calculation" id="calculation" class="form-control" style="padding: 10px;font-size: 30px;height: 50px;">
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-xs-3 nopadding w-auto">
+                    <button id="one" class="btn btn-primary btn-block btn_font width-btn" onclick="UserClickButton('1')">1</button>
+                </div>
+                <div class="col-xs-3 nopadding w-auto">
+                    <button id="two" class="btn btn-primary btn-block btn_font width-btn" onclick="UserClickButton('2')">2</button>
+                </div>
+                <div class="col-xs-3 nopadding w-auto">
+                    <button id="three" class="btn btn-primary btn-block btn_font width-btn" onclick="UserClickButton('3')">3</button>
+                </div>
+                <div class="col-xs-3 nopadding w-auto">
+                    <button id="add" class="btn btn-success btn-block btn_font width-btn" onclick='UserClickButton("+")'>+</button>
+                </div>
+            </div>
+                <div class="row">
+                    <div class="col-xs-3 nopadding w-auto">
+                        <button id="four" class="btn btn-primary btn-block btn_font width-btn" onclick='UserClickButton("4")'>4</button>
+                    </div>
+                    <div class="col-xs-3 nopadding w-auto">
+                        <button id="five" class="btn btn-primary btn-block btn_font width-btn" onclick='UserClickButton("5")'>5</button>
+                    </div>
+                    <div class="col-xs-3 nopadding w-auto">
+                        <button id="six" class="btn btn-primary btn-block btn_font width-btn" onclick='UserClickButton("6")'>6</button>
+                    </div>
+                    <div class="col-xs-3 nopadding w-auto">
+                        <button id="minus" class="btn btn-success btn-block btn_font width-btn" onclick='UserClickButton("-")'>-</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3 nopadding w-auto">
+                        <button id="seven" class="btn btn-primary btn-block btn_font width-btn" onclick='UserClickButton("7")'>7</button>
+                    </div>
+                    <div class="col-xs-3 nopadding w-auto">
+                        <button id="eight" class="btn btn-primary btn-block btn_font width-btn" onclick='UserClickButton("8")'>8</button>
+                    </div>
+                    <div class="col-xs-3 nopadding w-auto">
+                        <button id="nine" class="btn btn-primary btn-block btn_font width-btn" onclick='UserClickButton("9")'>9</button>
+                    </div>
+                    <div class="col-xs-3 nopadding w-auto">
+                        <button id="multiply" class="btn btn-success btn-block btn_font width-btn" onclick='UserClickButton("*")'>*</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3 nopadding w-auto">
+                        <button id="dot" class="btn btn-primary btn-block btn_font width-btn" onclick='UserClickButton(".")'>.</button>
+                    </div>
+                    <div class="col-xs-3 nopadding w-auto">
+                        <button id="zero" class="btn btn-primary btn-block btn_font width-btn" onclick='UserClickButton("0")'>0</button>
+                    </div>
+                    <div class="col-xs-3 nopadding w-auto">
+                        <button id="equal" class="btn btn-primary btn-block btn_font width-btn" onclick='CalculateValue()'>=</button>
+                    </div>
+                    <div class="col-xs-3 nopadding w-auto">
+                        <button id="divide" class="btn btn-success btn-block btn_font width-btn" onclick='UserClickButton("/")'>/</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 nopadding w-auto">
+                        <button class="btn btn-danger btn-block width-btn-clear" onclick="ClearData()">CLEAR</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+  
+        <div class="tab-pane fade content p-4 p-md-5 pt-5" id="exercicio6" role="tabpanel" aria-labelledby="exercicio6-tab" tabindex="0">
+          <h2 class="mb-4">Exercício #06</h2>
+          <p>Percorra o array [1,2,3,4,5,6,7,8,9,10] e exiba apenas os valores pares.</p>
+
+          <p>Os números pares são:</p>
+          <div id="exe6"></div>
+        </div>
+  
+        <div class="tab-pane fade content p-4 p-md-5 pt-5" id="exercicio7" role="tabpanel" aria-labelledby="exercicio7-tab" tabindex="0">
+          <h2 class="mb-4">Exercício #07</h2>
+          <p>O custo de um carro novo ao consumidor é obtido com a seguinte fórmula: 
+             <p>custo final = custo de fábrica + (custo de fábrica * percentual do distribuidor) + (custo de fábrica * percentual de impostos) </p>
+            
+            <p>O usuário terá uma tela para entrar com os valores:</p>
+  
+            <ul>
+              <li>custo de fábrica => nome do input custoFabrica</li>
+              <li>% distribuidor => nome do input percDistribuidor</li>
+              <li>% impostos => nome do input percImpostos</li>
+              <li>Valor final => nome do input valorfinal</li>
+              <li>Deverá executar o cálculo e demonstrar o resultado no “valorfinal” quando clicar no botão “btncalcular”.</li>
+            </ul>
+          </p>
+
+          <div class="row mt-4">
+            <div class="col-md-6 col-12">
+              <div class="mb-3">
+                <label for="custoFabrica" class="form-label">Custo de fábrica</label>
+                <input type="text" class="form-control" id="custoFabrica">
+              </div>
+              
+              <div class="mb-3">
+                <label for="percDistribuidor" class="form-label">% distribuidor </label>
+                <input type="text" class="form-control" id="percDistribuidor">
+              </div>
+            </div>
+            <div class="col-md-6 col-12">
+              <div class="mb-3">
+                <label for="percImpostos" class="form-label">% impostos</label>
+                <input type="text" class="form-control" id="percImpostos">
+              </div>
+
+              <label for="valorfinal" class="form-label">Valor final</label>
+              <div class="input-group flex-nowrap mb-3">
+                <span class="input-group-text" id="addon-wrapping">R$</span>
+                <input type="text" class="form-control" id="valorfinal" readonly aria-describedby="addon-wrapping">
+              </div>
+            </div>
+          </div>
+          
+          <div class="d-flex align-items-end justify-content-end">
+            <button id="btncalcular" type="button" class="btncalcular btn btn-success" onclick="calculoCarro()">Calcular</button>
+          </div>
+        </div>
+      </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/sidebar.js"></script>
+    <script src="js/exercicios.js"></script>
 </body>
 </html>
